@@ -1,0 +1,421 @@
+/*#region Header Css */
+
+.gradient-text {
+    background-color: #CA4246;
+    background-image: linear-gradient( 45deg, #CA4246 16.666%, #E16541 16.666%, #E16541 33.333%, #F18F43 33.333%, #F18F43 50%, #8B9862 50%, #8B9862 66.666%, #476098 66.666%, #476098 83.333%, #A7489B 83.333%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-simple-animation-rev 0.2s ease forwards;
+}
+
+.gradient-text:hover {
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 750%;
+    }
+    40% {
+        background-size: 750%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 750%;
+    }
+    100% {
+        background-size: 750%;
+    }
+}
+
+header {
+    margin-top: 1em;
+    margin-top: calc(50vh - 3em);
+}
+
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: normal;
+    font-size: 6em;
+    text-align: center;
+}
+
+
+/*#endregion */
+
+
+/*#region Header's Buttons Css */
+
+.gradient_text {
+    background-color: #6c36d8;
+    background-image: linear-gradient( 45deg, #0a4234 50%, #f2cfed 50%);
+    background-size: 270%;
+    background-repeat: repeat;
+    background-position: top right;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    animation: button-animation 0.32s 0.15s ease-out forwards;
+}
+
+.gradient_text.table_btn {
+    background-color: #6c36d8;
+    background-image: linear-gradient( 45deg, #0a4234 50%, #92fbd3 50%);
+}
+
+.gradient_text.card_btn {
+    background-color: #6c36d8;
+    background-image: linear-gradient( 45deg, #151953 50%, #92e6fb 50%);
+}
+
+a:hover,
+a:hover span {
+    animation: button-animation-rev 0.32s ease-out forwards;
+}
+
+a:hover {
+    box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+@keyframes button-animation {
+    0% {
+        background-position: top right;
+    }
+    100% {
+        background-position: top left;
+    }
+}
+
+@keyframes button-animation-rev {
+    0% {
+        background-position: top left;
+    }
+    100% {
+        background-position: top right;
+    }
+}
+
+a {
+    background-size: 270%;
+    background-repeat: repeat;
+    background-position: top right;
+    animation: button-animation 0.32s 0.15s ease-out forwards;
+    display: table;
+    border-radius: 0.5em;
+    text-decoration: none;
+    box-shadow: 7px 4px 20px 1px rgba(0, 0, 0, 0.15);
+    padding: 1.5em 0;
+    cursor: pointer;
+}
+
+a#tableBtn {
+    background-image: linear-gradient(45deg, #92fbd3 50%, #0a4234 50%);
+}
+
+a#cardBtn {
+    background-image: linear-gradient(45deg, #92e6fb 50%, #151953 50%);
+}
+
+a span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    padding: 0 1.5em;
+}
+
+
+/*#endregion */
+
+
+/*#region Table */
+
+
+/*#region Users Table Css */
+
+.users_table_head {
+    color: #d1ede169;
+}
+
+.user_table_body_tr {
+    background-color: #d1ede169;
+    border-bottom: #028c6a;
+    color: #003e19;
+    transition: all .2s;
+}
+
+.user_table_body_tr:hover {
+    background-color: #99e9c6;
+}
+
+.user_table_body_tr:active {
+    background-color: #58c093;
+}
+
+.user_table_body_th {
+    color: #028c6a;
+}
+
+
+/*#endregion */
+
+
+/*#region Posts Table Css */
+
+.posts_table_head {
+    color: #eeece1ad;
+}
+
+.post_table_body_tr {
+    background-color: #eeece1ad;
+    border-bottom: #a46843;
+    color: #370d00;
+    transition: all .2s;
+}
+
+.post_table_body_th {
+    color: #a46843;
+}
+
+
+/* First Table Button */
+
+a.see_post_author_table_btn {
+    color: #eeece1ad!important;
+    background-color: #370d00;
+    border: 2px solid transparent;
+    transition: all .2s;
+}
+
+a.see_post_author_table_btn:hover {
+    background-color: #bd8e62;
+    border-color: #bd8e62;
+}
+
+a.see_post_author_table_btn:active {
+    background-color: #a46843;
+    border-color: #a46843;
+    box-shadow: 0 0 0 0.25rem #a4684378;
+}
+
+
+/* Second Table Button */
+
+a.see_post_comments_table_btn {
+    color: #e1dcd9!important;
+    background-color: #a67f78;
+    border: 2px solid transparent;
+    transition: all .2s;
+}
+
+a.see_post_comments_table_btn:hover {
+    background-color: #8f8681;
+    border-color: #8f8681;
+}
+
+a.see_post_comments_table_btn:active {
+    background-color: #32435f;
+    border-color: #32435f;
+    box-shadow: 0 0 0 0.25rem #32435f77;
+}
+
+
+/*#endregion */
+
+
+/*#region Author Table Css */
+
+.author_table_head {
+    background-color: #125D98;
+    color: #fff;
+}
+
+.author_table_body_tr {
+    background-color: #DDDDDD;
+    color: #125D98;
+    border-bottom: #125D98;
+    font-size: 1.5rem;
+}
+
+.author_table_body_tr th,
+.author_table_body_tr td {
+    padding: 20px 30px 20px 15px;
+}
+
+.author_table_body_th {
+    color: #F5A962;
+}
+
+
+/*#endregion */
+
+
+/*#region Comments Table Css */
+
+.comments_table_head {
+    background-color: #FF8882;
+    color: #fff;
+}
+
+.comment_table_body_tr {
+    background-color: #fff3f0;
+    color: #194350;
+    border-bottom: #194350;
+    font-size: 1.5rem;
+}
+
+.comment_table_body_tr th,
+.comment_table_body_tr td {
+    padding: 20px 30px 20px 15px;
+}
+
+.comment_table_body_th {
+    color: #9DBEB9;
+}
+
+
+/*#endregion */
+
+
+/*#endregion */
+
+
+/*#region Cards */
+
+
+/*#region User Cards Css */
+
+.user {
+    color: #6bb7d3;
+    border-color: #6bb7d3;
+    background-color: #d1dddb69;
+    transition: all .2s;
+}
+
+.user h5 {
+    color: #3587a5;
+    transition: all .2s;
+}
+
+.user:hover,
+.user:hover h5 {
+    color: #354e57;
+}
+
+a.see-user-posts-card-btn {
+    color: #d1dddb!important;
+    background-color: #407b91;
+    border: 2px solid transparent;
+    transition: all .2s;
+}
+
+a.see-user-posts-card-btn:hover {
+    background-color: #1d6a96;
+    border-color: #1d6a96;
+}
+
+a.see-user-posts-card-btn:active {
+    background-color: #283b42;
+    border-color: #283b42;
+    box-shadow: 0 0 0 0.25rem #283b4280;
+}
+
+
+/*#endregion */
+
+
+/*#region Post Card Css */
+
+.post {
+    color: #fff;
+    border-color: #e0a2a8;
+    background-color: #fed5d9;
+    transition: all .2s;
+}
+
+.post:hover {
+    background-color: #fdcbd0;
+}
+
+
+/* First Card Button */
+
+a.see-post-author-card-btn {
+    color: #fff;
+    background-color: #ccd3d9;
+    border: 2px solid transparent;
+    transition: all .2s;
+}
+
+a.see-post-author-card-btn:hover {
+    background-color: #adb9c4;
+    color: #fff;
+    border-color: #adb9c4;
+}
+
+a.see-post-author-card-btn:active {
+    background-color: #8a9baa;
+    color: #fff;
+    border-color: #8a9baa;
+    box-shadow: 0 0 0 0.25rem #8a9baa96;
+}
+
+
+/* Second Card Button */
+
+a.see-post-comments-card-btn {
+    color: #fff;
+    background-color: #e7939d;
+    border: 2px solid transparent;
+    transition: all .2s;
+}
+
+a.see-post-comments-card-btn:hover {
+    background-color: #e7838f;
+    color: #fff;
+    border-color: #e7838f;
+}
+
+a.see-post-comments-card-btn:active {
+    background-color: #e96675;
+    color: #fff;
+    border-color: #e96675;
+    box-shadow: 0 0 0 0.25rem #e9667596;
+}
+
+
+/*#endregion */
+
+
+/*#region Comments Card Css */
+
+.comment {
+    color: #47597E;
+    border-color: #47597E;
+    background-color: #DBE6FD;
+    transition: all .2s;
+}
+
+.comment:hover {
+    color: #fff;
+    background-color: #B2AB8C;
+}
+
+
+/*#endregion */
+
+
+/*#endregion */
